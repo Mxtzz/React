@@ -13,6 +13,7 @@ a{
     margin: 10px auto;
 }
 .navListUl{
+    z-index: 10;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -39,6 +40,7 @@ a{
 .navListA{
     display: block;
     color: #333;
+    outline: none;
     border: #ddd solid 1px;
     border-radius: 5px;
     padding: 5px;

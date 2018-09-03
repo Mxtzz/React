@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import myTagList from '../myTagList.json'
+import '../css/addTag.css';
 
-class Form extends Component{
+class AddTag extends Component{
     constructor(props){
         super(props);
         this.state={
@@ -63,22 +63,25 @@ class Form extends Component{
     }
 
     render(){
+        
         return(
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    TagName:
-                    <input onChange={this.handleTagName}/>
-                </label>
-                <br />
-                <label>
-                    Href:
-                    <input onChange={this.handleHref}/>
-                </label>
-                
-                <br />
-                <input type='submit' value='Submit' />
-            </form>
+            <div className="addTag">
+                <div className="addTagMain">
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="tagName">
+                            <input onChange={this.handleTagName} type="text" placeholder="Tag Name"/>
+                        </div>
+                        <br />
+                        <div className="href">
+                            <input onChange={this.handleHref} type="text" placeholder="Href"/>
+                        </div>
+                        <br />
+                        <input type='submit' value='Submit' className="tagNameSubmit" />
+                    </form>
+                </div>
+            </div>
         )
     }
 }
-export default Form
+
+export default AddTag

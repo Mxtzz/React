@@ -1,0 +1,40 @@
+.addTag{
+    position: fixed;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    justify-content:center;
+    align-items:Center;
+    background: rgba(0,0,0,0.3);
+}
+.addTagMain{
+    background: #fff;
+    display: flex;
+    padding: 50px;
+}
+.tagName input{
+    min-width: 300px;
+    height: 30px;
+    border-bottom: #ff7400 1px solid;
+    text-align: center;
+}
+
+.href input{
+    min-width: 300px;
+    height: 30px;
+    border-bottom: #ff7400 1px solid;
+    text-align: center;
+}
+
+.tagNameSubmit{
+    height: 38px;
+    width: 150px;
+    margin-top: 20px;
+    padding: 5px;
+    background: #ff7400;
+    border-radius: 20px;
+    border:none;
+}

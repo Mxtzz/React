@@ -12,6 +12,9 @@ class Tag extends Component{
     componentWillReceiveProps(){
         
     }
+    addNewTag=()=>{
+        this.props.isAddTagDisplay(true)
+    }
     
     render(){
         let name = this.props.name.myTagList;
@@ -29,12 +32,12 @@ class Tag extends Component{
             <ul className="navListUl">
                 {listItems}
                 <li className="navListLi">
-                    <a href='' className="navListA">
+                    <button className="navListA">
                         <div>
                             <img src={require('../logo.svg')} className="navImg"  alt="logo"/>
                             <p className="navListName">Add New Tag</p>
                         </div>
-                    </a>
+                    </button>
                 </li>
             </ul>
         )
