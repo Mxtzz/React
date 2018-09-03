@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import myTagList from '../myTagList.json'
-
-const tagList = myTagList.myTagList
+// import myTagList from '../myTagList.json'
 
 class Form extends Component{
     constructor(props){
@@ -32,20 +30,37 @@ class Form extends Component{
     }
 
     handleSubmit = (e) => {
-        console.log(this.state.id);
-        console.log(this.state.tagName);
-        console.log(this.state.href);
         e.preventDefault();
+        let tagList1 = localStorage.getItem('myTagList')
+        let tagList = JSON.parse(tagList1)
+        let id = ''
         console.log(tagList)
+        if(tagList){
+            id = "myTagList" + tagList.length
+        }else{
+            id = "myTagList0"
+        }
 
-        let id = "myTagList" + tagList.length
-        tagList.push({ 
-            "id" : id,
-            "href" : this.state.href,
-            "tagName" : this.state.tagName
+        if(tagList){
+            tagList.push({
+                "id" : id,
+                "href" : this.state.href,
+                "tagName" : this.state.tagName
+            })
+        }else{
+            tagList = [{ 
+                "id" : id,
+                "href" : this.state.href,
+                "tagName" : this.state.tagName
+            }]
+        }
+        
+        localStorage.setItem('myTagList',JSON.stringify(tagList))
+        this.setState({
+            id:'',
+            href:'',
+            tagName:'',
         })
-        console.log(tagList)
-
     }
 
     render(){
@@ -53,12 +68,12 @@ class Form extends Component{
             <form onSubmit={this.handleSubmit}>
                 <label>
                     TagName:
-                    <input value={this.state.value} onChange={this.handleTagName}/>
+                    <input onChange={this.handleTagName}/>
                 </label>
                 <br />
                 <label>
                     Href:
-                    <input value={this.state.value} onChange={this.handleHref}/>
+                    <input onChange={this.handleHref}/>
                 </label>
                 
                 <br />
