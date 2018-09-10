@@ -74,7 +74,7 @@ class AddTag extends Component{
                     <div className="closeAddTag" onClick={this.props.isAddTagDisplay}>X</div>
                     <form onSubmit={this.handleSubmit}>
                         <div className="tagName">
-                            <input onChange={this.handleTagName} type="text" placeholder="Tag Name"/>
+                            <input onChange={this.handleTagName} type="text" autoFocus placeholder="Tag Name"/>
                         </div>
                         <br />
                         <div className="href">

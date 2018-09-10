@@ -26,21 +26,22 @@ class Tag extends Component{
     }
     
     render(){
-        // let tagList = this.props.tagList;
         let tagList = this.state.myTagList
         this.state.myTagList ? tagList = this.state.myTagList : tagList = []
+
         let listItems = tagList.map((item) =>
             <li className="navListLi" key={item.id}>
                 <a href={item.href} title={item.tagName} target="_blank" className="navListA">
                     <div>
-                        <div>
-                            <img src={require('../logo.svg')} className="navImg" alt="logo" />
+                        <div className="navImgContent">
+                            <img src={item.href+'/favicon.ico'} className="navImg" alt="logo" />
                         </div>
                         <div className="navListName">{item.tagName}</div>
                     </div>
                 </a>
             </li>
         );
+
         return(
             <ul className="navListUl">
                 {listItems}
