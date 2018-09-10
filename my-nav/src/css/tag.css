@@ -1,0 +1,42 @@
+.navListLi{
+    float: left;
+    margin: 10px;
+}
+
+.navImg{
+    width: 50px;
+    height: 50px;
+    background: #eee;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.navListName{
+    font-size: 16px;
+    padding: 5px;
+}
+
+.navListA{
+    display: block;
+    color: #333;
+    outline: none;
+    border: #ddd solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;  
+    background: linear-gradient(rgb(252, 252, 252),rgb(241, 241, 241));
+    
+}
+.navListA div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.navListLi:hover{
+    border-radius: 5px;
+    color: #aaa;
+    box-shadow: 0px 0px 10px #ddd;
+}

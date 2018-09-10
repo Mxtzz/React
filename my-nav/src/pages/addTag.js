@@ -40,33 +40,38 @@ class AddTag extends Component{
             id = "myTagList0"
         }
 
-        if(tagList){
-            tagList.push({
-                "id" : id,
-                "href" : this.state.href,
-                "tagName" : this.state.tagName
+        if(this.state.href !== '' && this.state.tagName !== ''){
+            if(tagList){
+                tagList.push({
+                    "id" : id,
+                    "href" : this.state.href,
+                    "tagName" : this.state.tagName
+                })
+            }else{
+                tagList = [{ 
+                    "id" : id,
+                    "href" : 'https://' + this.state.href,
+                    "tagName" : this.state.tagName
+                }]
+            }
+            localStorage.setItem('myTagList',JSON.stringify(tagList))
+            this.setState({
+                id:'',
+                href:'',
+                tagName:'',
             })
+            this.props.isAddTagDisplay()
         }else{
-            tagList = [{ 
-                "id" : id,
-                "href" : this.state.href,
-                "tagName" : this.state.tagName
-            }]
+            alert('没有填写内容！')
         }
-        
-        localStorage.setItem('myTagList',JSON.stringify(tagList))
-        this.setState({
-            id:'',
-            href:'',
-            tagName:'',
-        })
+
     }
 
-    render(){
-        
+    render(){      
         return(
             <div className="addTag">
                 <div className="addTagMain">
+                    <div className="closeAddTag" onClick={this.props.isAddTagDisplay}>X</div>
                     <form onSubmit={this.handleSubmit}>
                         <div className="tagName">
                             <input onChange={this.handleTagName} type="text" placeholder="Tag Name"/>

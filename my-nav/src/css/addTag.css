@@ -14,7 +14,22 @@
     background: #fff;
     display: flex;
     padding: 50px;
+    position: relative;
 }
+
+.closeAddTag{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    background: #ccc;
+}
+.closeAddTag:hover{
+    background: #ff7400;
+}
+
 .tagName input{
     min-width: 300px;
     height: 30px;
@@ -34,7 +49,12 @@
     width: 150px;
     margin-top: 20px;
     padding: 5px;
+    color: #fff;
     background: #ff7400;
     border-radius: 20px;
     border:none;
 }
+.tagNameSubmit:hover{
+    /* background: #ccc; */
+}
+

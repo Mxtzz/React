@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/nav.css';
-import myTagList from '../myTagList.json';
+// import myTagList from '../myTagList.json';
 import Tag from './tag';
 import AddTag from './addTag';
 
@@ -15,12 +15,16 @@ class Nav extends Component{
         
     }
 
-    componentWillReceiveProps(){
+    componentWillMount(){
+
     }
 
-    isAddTagDisplay = (visible) => {
+    componentWillReceiveProps(nextProps){
+        console.log('1')
+    }
+
+    isAddTagDisplay = () => {
         this.setState({isAddTagDisplay: !this.state.isAddTagDisplay})
-        console.log(this.state.isAddTagDisplay)
     }
 
     handleChange = (e) => {
@@ -35,19 +39,21 @@ class Nav extends Component{
         e.preventDefault();
         
         this.setState({
-            value:''
+            value:'',
+            isAddTagDisplay: !this.state.isAddTagDisplay,
         })
     }
 
     render(){
         return(
             <div className="navList">
-                <button onClick={this.isAddTagDisplay} >Display Add</button>
                 <ul className="navListUl">
-                    <Tag name={myTagList} isAddTagDisplay={(visible)=>this.isAddTagDisplay(visible)}  />
+                    <Tag isAddTagDisplay={this.isAddTagDisplay}  />
                 </ul>
-                { this.state.isAddTagDisplay == true ? 
-                    <AddTag />
+                { this.state.isAddTagDisplay === true ? 
+                    <AddTag 
+                        isAddTagDisplay={this.isAddTagDisplay} 
+                    />
                     :
                     null
                 }
@@ -56,8 +62,6 @@ class Nav extends Component{
         )
     }
 }
-
-
 
 export default Nav
 
