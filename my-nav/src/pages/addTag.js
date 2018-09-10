@@ -44,7 +44,7 @@ class AddTag extends Component{
             if(tagList){
                 tagList.push({
                     "id" : id,
-                    "href" : this.state.href,
+                    "href" : 'https://' + this.state.href,
                     "tagName" : this.state.tagName
                 })
             }else{

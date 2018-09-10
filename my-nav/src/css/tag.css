@@ -12,8 +12,14 @@
 }
 
 .navListName{
-    font-size: 16px;
+    font-size: 14px;
     padding: 5px;
+    width: 96px;
+    overflow: hidden;
+    word-break: break-word;
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .navListA{
@@ -29,10 +35,6 @@
     
 }
 .navListA div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
     width: 100%;
 }
 .navListLi:hover{

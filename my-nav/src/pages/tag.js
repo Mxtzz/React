@@ -31,10 +31,12 @@ class Tag extends Component{
         this.state.myTagList ? tagList = this.state.myTagList : tagList = []
         let listItems = tagList.map((item) =>
             <li className="navListLi" key={item.id}>
-                <a href={item.href} target="_blank" className="navListA">
+                <a href={item.href} title={item.tagName} target="_blank" className="navListA">
                     <div>
-                        <img src={require('../logo.svg')} className="navImg" alt="logo" />
-                        <p className="navListName">{item.tagName}</p>
+                        <div>
+                            <img src={require('../logo.svg')} className="navImg" alt="logo" />
+                        </div>
+                        <div className="navListName">{item.tagName}</div>
                     </div>
                 </a>
             </li>
@@ -43,12 +45,12 @@ class Tag extends Component{
             <ul className="navListUl">
                 {listItems}
                 <li className="navListLi">
-                    <button className="navListA" onClick={this.props.isAddTagDisplay}>
+                    <div className="navListA" onClick={this.props.isAddTagDisplay}>
                         <div>
                             <img src={require('../logo.svg')} className="navImg"  alt="logo"/>
-                            <p className="navListName">Add New Tag</p>
+                            <div className="navListName">Add New Tag</div>
                         </div>
-                    </button>
+                    </div>
                 </li>
             </ul>
         )
