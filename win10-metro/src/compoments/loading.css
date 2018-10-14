@@ -1,0 +1,126 @@
+.loadingText{
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin: auto;
+}
+
+.loadingText p{
+    color: #fff;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 500px) {
+    .loadingText{
+        top: 60%;
+    }
+    .loadingText p{
+        color: #fff;
+        font-size: 16px;
+    }
+}
+
+/* 动画 */
+.loading{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0099FF;
+    animation: bgColor 16087ms ease-in alternate infinite;
+}
+
+.loadingAnimate {
+    
+}
+@keyframes bgColor {
+    0% { background: #00f; }
+    50% { background: #0f0; }
+    100% { background: #f00; }
+}
+.loadingAnimate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+.loadingAnimate .circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    transform: rotate(225deg);
+    animation-iteration-count: infinite;
+    animation-name: orbit;
+    animation-duration: 5.5s;
+}
+.loadingAnimate .circle:after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background: #fff;
+}
+.loadingAnimate .circle:nth-child(2) {
+    animation-delay: 200ms;
+}
+.loadingAnimate .circle:nth-child(3) {
+    animation-delay: 400ms;
+}
+.loadingAnimate .circle:nth-child(4) {
+    animation-delay: 600ms;
+}
+.loadingAnimate .circle:nth-child(5) {
+    animation-delay: 800ms;
+}
+.loadingAnimate .bg {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    margin-left: -16px;
+    margin-top: -16px;
+    border-radius: 13px;
+    animation: bgColor 16087ms ease-in alternate infinite;
+}
+@keyframes orbit {
+    0% {
+      transform: rotate(225deg);
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    7% {
+      transform: rotate(345deg);
+      animation-timing-function: linear;
+    }
+    30% {
+      transform: rotate(455deg);
+      animation-timing-function: ease-in-out;
+    }
+    39% {
+      transform: rotate(690deg);
+      animation-timing-function: linear;
+    }
+    70% {
+      transform: rotate(815deg);
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    75% {
+      transform: rotate(945deg);
+      animation-timing-function: ease-out;
+    }
+    76% {
+      transform: rotate(945deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(945deg);
+      opacity: 0;
+    }
+}
