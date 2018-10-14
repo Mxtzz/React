@@ -2,6 +2,34 @@ import React, { Component } from 'react';
 import './loading.css';
 
 class Loading extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            tips:[
+                    '即将自动更新',
+                    '更新将不会进行很长时间',
+                    '但有时可能会进行很长时间 : )'
+                ],
+            tipsIndex: 0
+        }
+    }
+    componentWillMount(){
+        this.tipsIndex1()
+    }
+
+    tipsIndex1(){
+        setTimeout(() => {
+            this.setState({ tipsIndex: 1 })
+            this.tipsIndex2()
+        }, 5000);
+    }
+    tipsIndex2(){
+        setTimeout(() => {
+            this.setState({ tipsIndex: 2 })
+            this.tipsIndex1()
+        }, 10000);
+    }
+
     render() {
         return (
             <div className="loading">
@@ -15,7 +43,7 @@ class Loading extends Component {
                         <div className='circle'></div>
                     </div>  
                     <div className="loadingText">
-                        <p>更新将不会进行很长时间</p>
+                        <p>{this.state.tips[this.state.tipsIndex]}</p>
                     </div>
                 </div>
             </div>
