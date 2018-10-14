@@ -90,7 +90,7 @@
 }
 @keyframes orbit {
     0% {
-      transform: rotate(225deg);
+      transform: rotate(180deg);
       opacity: 1;
       animation-timing-function: ease-out;
     }
@@ -112,15 +112,15 @@
       animation-timing-function: ease-out;
     }
     75% {
-      transform: rotate(945deg);
+      transform: rotate(900deg);
       animation-timing-function: ease-out;
     }
     76% {
-      transform: rotate(945deg);
+      transform: rotate(900deg);
       opacity: 0;
     }
     100% {
-      transform: rotate(945deg);
+      transform: rotate(900deg);
       opacity: 0;
     }
 }
