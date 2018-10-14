@@ -1,0 +1,31 @@
+.desktop{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: rgb(62,114,195); */
+    /* 63,217,114 */
+    /* 36,67,116 */
+    /* button #3E73D6 */
+    background: #30599D;
+}
+
+.stateBar{
+    /* background: #3E72C3; */
+    background: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 42px;
+}
+
+.startBtn{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 42px;
+    width: 56px;
+    background: #444;
+}
