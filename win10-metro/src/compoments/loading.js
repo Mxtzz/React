@@ -6,6 +6,7 @@ class Loading extends Component {
         super(props);
         this.state = {
             tips:[
+                    '正在启动Windows',
                     '即将自动更新',
                     '更新将不会进行很长时间',
                     '但有时可能会进行很长时间 : )'
@@ -26,7 +27,13 @@ class Loading extends Component {
     tipsIndex2(){
         setTimeout(() => {
             this.setState({ tipsIndex: 2 })
-            this.tipsIndex1()
+            this.tipsIndex3()
+        }, 10000);
+    }
+    tipsIndex3(){
+        setTimeout(() => {
+            this.setState({ tipsIndex: 3 })
+            this.tipsIndex2()
         }, 10000);
     }
 
