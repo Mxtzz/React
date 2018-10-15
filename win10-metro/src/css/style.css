@@ -1,0 +1,16 @@
+ul li{
+    list-style: none;
+}
+
+.ym-inputText{
+    border: #ccc solid 2px;
+    height: 26px;
+    font-size: 20px;
+    padding: 3px;
+    padding-left: 8px;
+}
+
+.ym-link{
+    text-decoration: none;
+    color: #fff;
+}
