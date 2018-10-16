@@ -1,7 +1,10 @@
 .login{
     position: fixed;
     left: 0;right: 0;top: 0;bottom: 0;
-    background: #30599D;
+    /* background: #30599D; */
+    background-image: url('./../images/login.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .filterBg{
@@ -10,6 +13,7 @@
     background-image: url('./../images/login.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 2;
     /* filter: blur(3px); */
 }
 .loginMain{
@@ -32,6 +36,41 @@
     border-radius: 60px;
 }
 
+.userDisplay{
+    color: #fff;
+    font-size: 38px;
+    margin-top: 16px;
+    font-weight: 300;
+}
+
+.username{
+    width: 260px;
+}
+
 .password{
     margin-top: 10px;
+    width: 260px;
+}
+
+.forgetPin{
+    line-height: 38px;
+}
+
+.loginItem{
+    line-height: 38px;
+}
+
+.slideUp{
+    /* animation-name: slideup;
+    animation-duration: 2s; */
+}
+
+.slideup-exit {
+    opacity: 1;
+    transform: scale(1) translateY(0%);
+}
+.slideup-exit-active {
+    opacity: 1;
+    transform: scale(1) translateY(-100%);
+    transition: all 1000ms ease-out;
 }
