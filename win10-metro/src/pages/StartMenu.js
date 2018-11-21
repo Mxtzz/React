@@ -12,8 +12,14 @@ class StartMenu extends Component {
                     </div>
                     <div className="menuList">
                         <ul>
-                            <li className="">1</li>
-                            <li className="">2</li>
+                            <li className="appList">
+                                <img className="headIconImg" src={require('../images/windows.png')} alt="" />
+                                <p>OneNote</p>
+                            </li>
+                            <li className="appList">
+                                <img className="headIconImg" src={require('../images/windows.png')} alt="" />
+                                <p>OneNote</p>
+                            </li>
                             <li className="">3</li>
                             <li className="">4</li>
                             <li className="">5</li>
@@ -25,7 +31,13 @@ class StartMenu extends Component {
                         </ul>
                     </div>
                     <div className="menuMain">
-                    
+                        <div className="menuMainLeft">
+                            <div className="appL"></div>
+                            <div className="appS"></div>
+                        </div>
+                        <div className="menuMainRight">
+                        
+                        </div>
                     </div>
                 </div>
                 

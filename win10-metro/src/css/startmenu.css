@@ -33,12 +33,28 @@
 
 .menuList ul{
     margin: 0 auto;
+    padding-left: 0;
 }
 
 .menuList li{
-    padding: 20px 0;
     background: #666;
-    margin: 6px;
+    margin: 4px;
+    display: flex;
+}
+
+.appList img{
+    width: 28px;
+    height: 28px;
+    background: #3E73D6;
+    padding: 4px;
+}
+
+.appList p{
+    flex: 1;
+    line-height: 36px;
+    text-align: left;
+    padding: 0 8px;
+    color: #fff;
 }
 
 .menuMain{
@@ -48,5 +64,33 @@
     top: 0;
     bottom: 0;
     background: tomato;
+    display: flex;
+}
 
+.menuMainLeft{
+    background: lightgreen;
+    flex: 1;
+    margin: 4px;
+}
+
+.menuMainRight{
+    background: lightgreen;
+    flex: 1;
+    margin: 4px;
+}
+
+.appL{
+    width: 122px;
+    height: 122px;
+    background: #ccc;
+}
+
+.appM{
+    
+}
+
+.appS{
+    width: 61px;
+    height: 61px;
+    background: #aaa;
 }
